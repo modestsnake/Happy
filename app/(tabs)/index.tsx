@@ -1,4 +1,4 @@
-import { StyleSheet, TextInput, ScrollView } from 'react-native';
+import { StyleSheet, TextInput, ScrollView, Image } from 'react-native';
 import React, { useState } from 'react';
 import { RadioButton } from 'react-native-paper';
 import { Text, View } from '@/components/Themed';
@@ -23,13 +23,10 @@ const App = () => {
 
   const handleQuantityChange = (dishName, quantity) => {
     const numQuantity = Math.max(0, parseInt(quantity) || 0);
-    setQuantities(prevQuantities => {
-      console.log("Updated quantities: ", { ...prevQuantities, [dishName]: numQuantity });
-      return {
-        ...prevQuantities,
-        [dishName]: numQuantity,
-      };
-    });
+    setQuantities(prevQuantities => ({
+      ...prevQuantities,
+      [dishName]: numQuantity,
+    }));
   };
 
   const totalCost = Object.keys(quantities).reduce((sum, dishName) => {
@@ -63,7 +60,7 @@ const App = () => {
       </Picker>
 
       <RadioButton.Group onValueChange={value => setSelectedDish(value)} value={selectedDish}>
-        {filteredDishes().map((dish) => (
+        {filteredDishes().map((dish, index) => (
           <View key={dish.name} style={styles.radioContainer}>
             <View style={styles.radioButtonRow}>
               <RadioButton value={dish.name} color="#f5c74c" />
@@ -80,9 +77,64 @@ const App = () => {
                 onChangeText={text => handleQuantityChange(dish.name, text)}
               />
             </View>
+            {index === 0 && selectedCategory === "Breakfast" && (
+              <Image 
+                source={require('C:/Users/lab_services_student/Desktop/Mobile App Part 2/Happy/assets/images/break1.jpeg')} 
+                style={styles.image} 
+              />
+            )}
+            {index === 1 && selectedCategory === "Breakfast" && (
+              <Image 
+                source={require('C:/Users/lab_services_student/Desktop/Mobile App Part 2/Happy/assets/images/break2.jpeg')} 
+                style={styles.image} 
+              />
+            )}
+            {index === 2 && selectedCategory === "Breakfast" && (
+              <Image 
+                source={require('C:/Users/lab_services_student/Desktop/Mobile App Part 2/Happy/assets/images/break3.jpeg')} 
+                style={styles.image} 
+              />
+            )}
+            {index === 0 && selectedCategory === "Lunch and Dinner" && (
+              <Image 
+                source={require('C:/Users/lab_services_student/Desktop/Mobile App Part 2/Happy/assets/images/break4.jpeg')} 
+                style={styles.image} 
+              />
+            )}
+            {index === 1 && selectedCategory === "Lunch and Dinner" && (
+              <Image 
+                source={require('C:/Users/lab_services_student/Desktop/Mobile App Part 2/Happy/assets/images/break5.jpeg')} 
+                style={styles.image} 
+              />
+            )}
+            {index === 2 && selectedCategory === "Lunch and Dinner" && (
+              <Image 
+                source={require('C:/Users/lab_services_student/Desktop/Mobile App Part 2/Happy/assets/images/break6.jpeg')} 
+                style={styles.image} 
+              />
+            )}
+            {index === 0 && selectedCategory === "Drinks" && (
+              <Image 
+                source={require('C:/Users/lab_services_student/Desktop/Mobile App Part 2/Happy/assets/images/break6.jpeg')} 
+                style={styles.image} 
+              />
+            )}
+            {index === 1 && selectedCategory === "Drinks" && (
+              <Image 
+                source={require('C:/Users/lab_services_student/Desktop/Mobile App Part 2/Happy/assets/images/break6.jpeg')} 
+                style={styles.image} 
+              />
+            )}
+            {index === 2 && selectedCategory === "Drinks" && (
+              <Image 
+                source={require('C:/Users/lab_services_student/Desktop/Mobile App Part 2/Happy/assets/images/break6.jpeg')} 
+                style={styles.image} 
+              />
+            )}
           </View>
         ))}
       </RadioButton.Group>
+
       <Text style={styles.selected}>Selected Dish: {selectedDish}</Text>
       <Text style={styles.selected}>Quantity: {quantities[selectedDish] || 0}</Text>
       <Text style={styles.totalCost}>Total Price: ${totalCost.toFixed(2)}</Text>
@@ -104,7 +156,7 @@ const styles = StyleSheet.create({
   totalCost: {
     marginTop: 10,
     fontSize: 18, 
-    color: '#FF0000',  // Change to red for visibility
+    color: '#FF0000',  
     fontWeight: 'bold', 
   },
   radioContainer: {
@@ -152,6 +204,11 @@ const styles = StyleSheet.create({
     color: '#ffffff', 
     backgroundColor: '#783131', 
     marginBottom: 20, 
+  },
+  image: {
+    width: '100%',
+    height: 200, 
+    resizeMode: 'cover',
   },
 });
 
