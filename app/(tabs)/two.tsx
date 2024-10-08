@@ -13,7 +13,7 @@ export default function TabTwoScreen() {
         For inquiries or feedback, contact us at:
       </Text>
       <Text style={styles.description}>
-        Email: support@christoffelsfoodapp.com{"\n"}Phone: +1 (555) 123-4567
+        Email: support@christoffelsfoodapp.com{"\n"}Phone: (087) 123-4567
       </Text>
     </View>
   );
