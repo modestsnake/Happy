@@ -5,15 +5,15 @@ import { Text, View } from '@/components/Themed';
 import { Picker } from '@react-native-picker/picker'; 
 
 const dishes = [
-  { name: 'Spaghetti Carbonara', description: 'Classic Italian pasta with eggs, cheese, pancetta, and pepper.', price: 109.99 },
-  { name: 'Margherita Pizza', description: 'Fresh mozzarella, tomatoes, and basil on a traditional crust.', price: 120.99 },
-  { name: 'Caesar Salad', description: 'Crisp romaine lettuce with Caesar dressing, croutons, and parmesan cheese.', price: 79.99 },
-  { name: 'Chicken Alfredo', description: 'Grilled chicken with creamy Alfredo sauce and fettuccine pasta.', price: 209.99 },
-  { name: 'Vegetable Stir-Fry', description: 'Mixed vegetables stir-fried in a savory sauce, served with rice.', price: 119.99 },
-  { name: 'Grilled Salmon', description: 'Fresh salmon fillet, grilled to perfection, served with vegetables.', price: 199.99 },
-  { name: 'Beef Tacos', description: 'Soft tacos with seasoned beef, cheese, lettuce, and salsa.', price: 189.99 },
-  { name: 'Chicken Parmesan', description: 'Breaded chicken breast topped with marinara and melted cheese.', price: 149.99 },
-  { name: 'Eggplant Parmesan', description: 'Crispy eggplant with marinara sauce and melted mozzarella.', price: 129.99 },
+  { name: 'Fishfingers With Zesty Dip', description: 'Crispy fish fingers paired with zesty tomato sauce for a satifying meal in the morning.', price: 109.99 },
+  { name: 'Chicken and Veggie Bowl', description: 'Tender chickn strips served with boiled egg, crispy fried onions and chopped carrots for a wholesome meal.', price: 120.99 },
+  { name: 'Chocolate Pancakes', description: 'Flutty chocolate with a choice of whipped cream or berries.', price: 79.99 },
+  { name: 'Classic Chicken Burger', description: 'Seasoned petty served on a toasted bun, topped with crisp lettuce and onions.', price: 109.99 },
+  { name: 'Heaty Lasagna', description: 'Layers of rich meat sauce and tender pasta baked to perfection with metled cheese.', price: 119.99 },
+  { name: 'Garden Veggie Pizza', description: 'Crispy crust topped with a colourful meldey of fresh vegetables and zesty sauce.', price: 199.99 },
+  { name: 'Tropical Breeze', description: 'Refreshing cocktail of zety lemon or blueberries.', price: 79.99 },
+  { name: 'Berry Bliss', description: 'Cocktail mixed berries and sparkling water served with ice and garnished with fresh berries.', price: 69.99 },
+  { name: 'Guava Sunrise', description: 'Smooth tropical drink bursting with sweet guava flavour.', price: 59.99 },
 ];
 
 const App = () => {
@@ -115,19 +115,19 @@ const App = () => {
             )}
             {index === 0 && selectedCategory === "Drinks" && (
               <Image 
-                source={require('C:/Users/lab_services_student/Desktop/Mobile App Part 2/Happy/assets/images/break6.jpeg')} 
+                source={require('C:/Users/lab_services_student/Desktop/Mobile App Part 2/Happy/assets/images/drink1.jpg')} 
                 style={styles.image} 
               />
             )}
             {index === 1 && selectedCategory === "Drinks" && (
               <Image 
-                source={require('C:/Users/lab_services_student/Desktop/Mobile App Part 2/Happy/assets/images/break6.jpeg')} 
+                source={require('C:/Users/lab_services_student/Desktop/Mobile App Part 2/Happy/assets/images/drink2.jpg')} 
                 style={styles.image} 
               />
             )}
             {index === 2 && selectedCategory === "Drinks" && (
               <Image 
-                source={require('C:/Users/lab_services_student/Desktop/Mobile App Part 2/Happy/assets/images/break6.jpeg')} 
+                source={require('C:/Users/lab_services_student/Desktop/Mobile App Part 2/Happy/assets/images/drink3.jpg')} 
                 style={styles.image} 
               />
             )}
