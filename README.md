@@ -19,3 +19,11 @@ npm install expo
 -	Navigator
 
 4.	If you have any questions, feel free to contact me at [support@christoffelsfoodapp.com]. or (087) 123-4567
+5.	This is where you’ll find the files 
+Path is Happy/app/(tabs)
+
+-	Index.tsx is the Menu List
+-	Two.tsx is the About section
+-	_layout.tsx is the layout for adding the Menu and About Us heading
+
+
