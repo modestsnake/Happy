@@ -26,4 +26,15 @@ Path is Happy/app/(tabs)
 -	Two.tsx is the About section
 -	_layout.tsx is the layout for adding the Menu and About Us heading
 
+New Pages Added
+
+1. Login Screen
+A user-friendly login screen has been added, allowing users to securely log in to the application. This page includes fields for username and password, and integrates authentication mechanisms for a smooth user experience.
+
+2. Add Menu List
+The "Add Menu" page provides a simple interface for users to add items to the menu. It includes form fields for inputting details such as name, description, price, and category, making it easy to update the menu dynamically.
+
+3. Filter Page
+A new filter page has been introduced, enabling users to filter through items based on various criteria such as category, price range, or other attributes. This page improves navigation and helps users find specific items quickly.
+
 
